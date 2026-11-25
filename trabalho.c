@@ -208,8 +208,7 @@ void freeBST(bst *node) {
 // --- FUNÇÕES AUXILIARES DE STRING (Com string.h) ---
 
 int compareSTR(char* x, char* y) {
-    // strcasecmp compara ignorando maiúsculas/minúsculas (disponível com string.h / c.std)
-    // Caso prefira strcmp sensível a maiúsculas, basta trocar.
+    //compara ignorando maiúsculas/minúsculas 
     return strcasecmp(x, y) > 0 ? 1 : 0;
 }
 
