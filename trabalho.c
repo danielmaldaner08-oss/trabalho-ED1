@@ -277,7 +277,7 @@ Book* createBook() {
     return x;
 }
 
-// --- CADASTRO ---
+//    --- CADASTRO ---
 
 void registerBook(Library *n) {
     Book *x = createBook();
@@ -370,7 +370,7 @@ void registerUser(sent* s) {
     printf("Usuario cadastrado com sucesso!\n");
 }
 
-// --- BUSCAS OTIMIZADAS ---
+     //  -- BUSCAS OTIMIZADAS ---
 
 Book* searchCode(Library *s, int code) {
     Book* aux = searchBst(s->treeID, code);
@@ -473,7 +473,7 @@ void searchEmprestimosUser(Library *lib, sent *users, char* email) {
     }
 }
 
-// --- ATUALIZAÇÃO ---
+//  -- ATUALIZAÇÃO ---
 
 void updateBook(Library* s, int id) {
     Book* aux = searchBst(s->treeID, id);
@@ -521,7 +521,7 @@ void updateUser(sent* s, char* email) {
     printf("Email não encontrado!\n");
 }
 
-// --- EXCLUSÃO ---
+//  -- EXCLUSÃO ---
 
 void excludeForID(Library* s, int id) {
     if (s->first == NULL) {
@@ -598,7 +598,7 @@ void excludeForEmail(sent* s, char* email) {
     printf("Usuario com o email %s não foi encontrado.\n", email);
 }
 
-// --- EMPRÉSTIMO E DEVOLUÇÃO ---
+//  -- EMPRÉSTIMO E DEVOLUÇÃO ---
 
 void loanBook(Library* s, sent* users, int id) {    
     Book* aux = searchBst(s->treeID, id);
@@ -656,7 +656,7 @@ void returnBook(Library *s, int id) {
     printf("Livro não encontrado!\n");
 }
 
-// --- LIMPEZA DE MEMÓRIA ---
+//  -- LIMPEZA DE MEMÓRIA --
 
 void freeLibrary(Library *lib) {
     Book *aux = lib->first;
@@ -689,7 +689,7 @@ void freeUsers(sent *users) {
     users->qtd = 0;
 }
 
-// --- FUNÇÃO MAIN ---
+//  -- FUNÇÃO MAIN --
 
 int main() {
     tree *arvoreIds = (tree*) malloc(sizeof(tree));
